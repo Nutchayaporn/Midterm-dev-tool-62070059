@@ -5,21 +5,20 @@ import { Link } from "react-router-dom";
 import {InputGroup, FormControl, Row, Col , Container, Form, Button } from 'react-bootstrap';
 
 export default function App() {
-  var getData = async () => {
-    try {
-      const res = await fetch("http://localhost:4000/user");
 
-      if (res.status >= 400) {
-        throw new Error("Bad response from server");
-      }
+    React.useEffect(() => {
+        try {
+         const res = await fetch("http://localhost:4000/user");
+         if (res.status >= 400) {
+           throw new Error("Bad response from server");
+         }
+         const user = await res.json();
+         console.log(user);
+       } catch (err) {
+         console.error(err);
+       }
+     }, []);
 
-      const user = await res.json();
-
-      console.log(user);
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
   return (
  <div>
@@ -69,9 +68,12 @@ export default function App() {
           backgroundColor: "#b1d334",
           width: 300
         }}
+        
       >
         ลงทะเบียน
       </Link>
+
+      
 
  
 </Form>
