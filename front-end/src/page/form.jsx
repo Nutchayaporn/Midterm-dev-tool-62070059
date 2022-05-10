@@ -37,9 +37,9 @@ export default function App() {
 
   <Form.Select aria-label="Default select example">
   <option>เพศ</option>
-  <option value="1">ชาย</option>
-  <option value="2">หญิง</option>
-  <option value="3">ไม่ระบุ</option>
+  <option value="ชาย">ชาย</option>
+  <option value="หญิง">หญิง</option>
+  <option value="ไม่ระบุ">ไม่ระบุ</option>
 </Form.Select>
 
 
@@ -68,7 +68,6 @@ export default function App() {
           color: "#000",
           backgroundColor: "#b1d334",
           width: 300
-         
         }}
       >
         ลงทะเบียน

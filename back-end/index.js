@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const configs = require('./configs/database.js');
 const BlogModel = require('./model/model.js');
 const UserModel = require('./model/user.model.js');
+const phone = require("./model/phoneNum")
 const app = express();
 const port = 4000;
 
@@ -38,6 +39,8 @@ app.get('/user', async(req, res) => {
         err
     }
 })
+
+
 
 
 

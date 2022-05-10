@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
-const BlogSchema = mongoose.Schema({
-    title : {
+const PhoneSchema = mongoose.Schema({
+    phone : {
         type : String
     }
 })
 
-const BlogModel = mongoose.model('Takai', BlogSchema)
+const PhoneModel = mongoose.model('phone', PhoneSchema)
 
-module.exports = BlogModel
+module.exports = PhoneModel
